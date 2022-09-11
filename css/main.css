@@ -281,6 +281,7 @@ pre {
     border-radius: 50%;
     width: 30px;
     height: 30px;
+    transition: color 250ms var(--animation);
     border-color:rgba(0, 0, 0, 0.1);
     background-color: var(--background-color-h1);
 }
@@ -312,6 +313,7 @@ input:focus-within ~ .svg-email {
     left: 12px;
     bottom: 21px;
     color: var(--modal-color-svg);
+    transition: color 250ms var(--animation);
 }
 
 .form-modal {
@@ -385,7 +387,7 @@ input:focus-within ~ .svg-email {
     margin-right: 7px;
     width: 16px;
     height: 15px;
-    background-image: url(../svg/check\ .svg);
+    background-image: url(../img/check.svg);
 }
 
 .modal-check:checked + .svg-checkbox {
@@ -395,11 +397,25 @@ input:focus-within ~ .svg-email {
  }
 
  .modal-check:focus + .svg-checkbox {
-    border: 2.5px solid var(--title-text-color);
+    border: 2.5px solid var(--accent-color);
     border-radius: 2px;
     width: 16px;
     height: 15px; 
  }
+
+.modal-textarea:focus,
+.modal-input:focus,
+.href:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.href,
+.modal-check,
+.modal-textarea,
+.modal-input {
+    outline: none;
+    transition: border-color 250ms var(--animation);
+}
 
 .href {
     color: var(--accent-color);
@@ -895,6 +911,15 @@ input:focus-within ~ .svg-email {
 
 .footerr .logo {
     color: var(--background-color-h1);
+}
+
+.form-input {
+    outline: none;
+}
+
+.form-input:focus {
+    border: 1px solid var(--accent-color);
+    transition: border-color 250ms var(--animation);
 }
 
 .container-footer {

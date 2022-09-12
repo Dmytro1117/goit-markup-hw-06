@@ -107,7 +107,7 @@ pre {
     line-height: 1.2;
     letter-spacing: 0.03em;
     text-decoration: none;
-    margin-right: 93px;
+    margin-right: 91px;
 }
 
 .ul-nav {
@@ -211,8 +211,8 @@ pre {
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin: 0px 452px 30px;
-    padding-top: 200px;
+    margin-bottom: 30px;
+    margin-top: 0;
  }
 
  .section-hero {
@@ -220,6 +220,7 @@ pre {
     text-align: center;
     max-width: 1600px;
     min-height: 600px;
+    padding-top: 200px;
     margin-left: auto;
     margin-right: auto;
     background-image: 
@@ -464,13 +465,16 @@ input:focus-within ~ .svg-email {
     border-radius: 4px;
 }
 
+.section-work {
+    padding-top: 94px;
+}
+
 .box.container-work {
     width: 1200px;
     height: 248px;
     margin-left: auto;
     margin-right: auto;
-    margin: 94px auto;
-    padding: 0 15px;
+    padding: 0px 15px;
 }
 
 .flex-text:nth-child(4n) {
@@ -549,12 +553,15 @@ input:focus-within ~ .svg-email {
     height: 294px;
 }
 
-.container-about,
-.container-project {
-    margin: 94px auto;
-    padding: 0 15px;
+.section-about {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
+.container-about{
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 
 
@@ -580,7 +587,14 @@ input:focus-within ~ .svg-email {
 }
 
 .container-team {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section-team {
+    background-color: var(--background-color);
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .icon-link,
@@ -624,12 +638,6 @@ input:focus-within ~ .svg-email {
     display: flex;
 }
 
-.section-team {
-    background-color: var(--background-color);
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
 .flex-name:nth-child(4n) {
     margin-right: 0;
 }
@@ -650,12 +658,16 @@ input:focus-within ~ .svg-email {
 
 .container-clients {
     width: 1200px;
-    height: 372px;
+    /* height: 372px; */
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.section-clients {
     padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .svg-clients {
@@ -883,6 +895,16 @@ input:focus-within ~ .svg-email {
     margin: 20px 24px 0px;
 }
 
+.container-project {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section-project {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .project-name {
     color: var(--primary-text-color);
     font-size: 16px;
@@ -901,12 +923,17 @@ input:focus-within ~ .svg-email {
 
 
 .footerr {
+    display: flex;
     width: 1600px;
     height: 252px;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--hero-color);
-    display: flex;
+    align-items:baseline;
+}
+
+.container-footer {
+    margin-left: 215px;
 }
 
 .footerr .logo {
@@ -922,19 +949,11 @@ input:focus-within ~ .svg-email {
     transition: border-color 250ms var(--animation);
 }
 
-.container-footer {
-    margin: 0 auto;
-    width: 231px;
-    margin: 60px 70px 60px 215px;
-}
-
 .conteiner-networks {
     display: flex;
     flex-direction: column;
-    margin-top: 75px;
     margin-left: 70px;
 }
-
 
 .foot-title {
     color: var(--background-color-h1);
@@ -988,8 +1007,9 @@ input:focus-within ~ .svg-email {
 }
 
 .form {
-    margin: 72px 215px 94px 93px;
     width: 570px;
+    margin-top: 72px;
+    margin-left: 93px;
 }
 
 .form-input {

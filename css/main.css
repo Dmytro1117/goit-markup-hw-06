@@ -820,6 +820,8 @@ input:focus-within ~ .svg-email {
 .form-button:hover,
 .form-button:focus,
 .form-button:hover,
+.form-but:hover,
+.form-but:focus,
 .button:hover,
 .button:focus {
     color: var(--background-color-h1);

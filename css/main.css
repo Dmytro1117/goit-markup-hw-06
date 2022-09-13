@@ -106,7 +106,9 @@ button {
  .contacts:hover,
  .contacts:focus,
  .link-connection:hover,
- .link-connection:focus {
+ .link-connection:focus,
+ .adress:focus,
+ .adress:hover {
      color: var(--accent-color);
  }
 
@@ -259,8 +261,21 @@ button {
 
 
 
+
  /* Modal */
 
+ .modal-check {
+    /* appearance: none;
+    position: absolute; */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+ }
 
  .backdrop {
     position: fixed;
@@ -278,6 +293,11 @@ button {
     transform: translate(-50%, -50%) scale(0.8);
  }
 
+ .backdrop.is-hidden {
+     opacity: 0;
+     pointer-events: none;
+ }
+
  .modal {
     position: absolute;
     width: 528px;
@@ -290,12 +310,6 @@ button {
     0px 1px 1px rgba(0, 0, 0, 0.14), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-   
-}
-
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
 }
 
 .button-svg {
@@ -341,7 +355,7 @@ input:focus-within ~ .svg-email {
 .form-modal {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     padding: 40px;
 }
 
@@ -352,7 +366,9 @@ input:focus-within ~ .svg-email {
     height: 40px;
     border: 1px solid var(--modal-input-color);
     border-radius: 4px;
-  padding: 0;
+    padding-left: 42px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .modal-textarea {
@@ -361,9 +377,9 @@ input:focus-within ~ .svg-email {
     resize: none;
     border: 1px solid var(--modal-input-color);
     border-radius: 4px;
-    margin-bottom: 20px;
     margin-top: 4px;
-    padding: 0;
+    margin-bottom: 17px;
+    padding: 12px 16px;
 }
 
 .modal-title { 
@@ -372,7 +388,6 @@ input:focus-within ~ .svg-email {
     line-height: 1.15;
     text-align: center;
     color: var(--title-text-color);
-    margin: 0px 0px 12px;
 }
 
 .svg-email,
@@ -383,40 +398,22 @@ input:focus-within ~ .svg-email {
     width: 18px;
     height: 18px;
     bottom: 11px;
-    left: 20px;
+    left: 12px;
     color: var(--modal-color-svg);
     transition: fill 250ms var(--animation);
 }
 
-.form-div {
-
-}
-
-.modal-checkbox {
-   display: block;
-   text-align: center;
-}
-
-.modal-check {
-    /* appearance: none;
-    position: absolute; */
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
 
 .svg-checkbox {
+    display: inline-block;
+    align-items:center;
+    vertical-align:sub;
     border: 2px solid var(--title-text-color);
     border-radius: 2px;
     margin-right: 7px;
     width: 16px;
     height: 15px;
-    background-image: url(../img/img.jpg);
+    background-image: url(../img/check.svg);
 }
 
 .modal-check:checked + .svg-checkbox {
@@ -454,12 +451,6 @@ input:focus-within ~ .svg-email {
 .form-field .form-input:focus {
     color: white;
 }
-
-.aaaa {
-    display: block;
-    text-align: center;
-}
- 
 
 
 
@@ -767,6 +758,26 @@ input:focus-within ~ .svg-email {
     letter-spacing: 0.06em;
 }
 
+
+.form-but {
+    color: var(--background-color-h1);
+    background-color: var(--accent-color);
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    /* можно об'єднати з нижнім ботом */
+}
+
 .form-button {
     color: var(--background-color-h1);
     background-color: var(--accent-color);
@@ -806,6 +817,8 @@ input:focus-within ~ .svg-email {
     filter 250ms var(--animation);
 }
 
+.form-button:hover,
+.form-button:focus,
 .form-button:hover,
 .button:hover,
 .button:focus {
